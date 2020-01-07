@@ -1,10 +1,22 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Branch exists'
+description: 'Check if a branch exists, cross-repo'
+author: 'Arundo Analytics'
 inputs:
-  myInput:              # change this
-    description: 'input description here'
-    default: 'default value if applicable'
+  repository:
+    description: 'Which repository to check in (format: owner/repo)'
+    required: true
+    default: null
+  branch:
+    description: 'Which branch to check'
+    required: true
+    default: null
+  token:
+    description: 'Github token'
+    required: true
+    default: null
+outputs:
+  exists:
+    description: 'If the branch exists'
 runs:
   using: 'node12'
   main: 'dist/index.js'

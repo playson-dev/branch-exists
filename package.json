@@ -1,10 +1,11 @@
 {
-  "name": "typescript-action",
-  "version": "0.0.0",
+  "name": "branch-exists",
+  "version": "0.0.1",
   "private": true,
-  "description": "TypeScript template action",
+  "description": "Check if a branch exists, cross-repo",
   "main": "lib/main.js",
   "scripts": {
+    "dev": "node -r ts-node/register -r dotenv/config src/main.ts",
     "build": "tsc",
     "format": "prettier --write **/*.ts",
     "format-check": "prettier --check **/*.ts",
@@ -15,23 +16,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/arundo/branch-exists.git"
   },
   "keywords": [
     "actions",
     "node",
     "setup"
   ],
-  "author": "YourNameOrOrganization",
+  "author": "Arundo Analytics",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.0"
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^2.0.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.23",
     "@types/node": "^12.7.12",
     "@typescript-eslint/parser": "^2.8.0",
     "@zeit/ncc": "^0.20.5",
+    "dotenv": "^8.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-github": "^2.0.0",
     "eslint-plugin-jest": "^22.21.0",
@@ -40,6 +43,7 @@
     "js-yaml": "^3.13.1",
     "prettier": "^1.19.1",
     "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.4",
     "typescript": "^3.6.4"
   }
 }
