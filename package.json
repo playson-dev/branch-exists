@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arundo/branch-exists.git"
+    "url": "git+https://github.com/playson-dev/branch-exists.git"
   },
   "keywords": [
     "actions",

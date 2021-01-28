@@ -34,7 +34,7 @@ async function run(): Promise<void> {
       core.setOutput('exists', 'true')
       return
     } catch (e) {
-      if (e.message === 'Branch not found') {
+        if (/not found/i.test(e.message)) {
         core.setOutput('exists', 'false')
         return
       }
